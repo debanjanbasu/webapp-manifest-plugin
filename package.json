@@ -1,38 +1,39 @@
 {
-  "name": "webapp-manifest-plugin",
-  "version": "0.0.4",
-  "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
-  "keywords": [
-    "webpack",
-    "webapp",
-    "manifest",
-    "webapp manifest",
-    "manifest.json"
-  ],
-  "license": "MIT",
-  "description": "Create a web application manifest for your PWA based on your webpack build.",
-  "author": "David Buchan-Swanson <david.buchanswanson+npm@gmail.com>, Debanjan Basu <debanjanbasu2006@gmail.com>",
-  "devDependencies": {
-    "babel-cli": "^7.0.0-beta.3",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-plugin-syntax-trailing-function-commas": "^7.0.0-beta.0",
-    "babel-plugin-transform-class-properties": "^7.0.0-beta.3",
-    "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
-    "babel-polyfill": "^7.0.0-beta.3",
-    "babel-preset-env": "^2.0.0-alpha.20",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.9.0"
-  },
-  "scripts": {
-    "build": "babel -d lib src",
-    "build:watch": "npm run build -- --watch",
-    "prepublish": "npm run build"
-  },
-  "dependencies": {
-    "mime-types": "^2.1.18"
-  }
+    "name": "webapp-manifest-plugin",
+    "version": "0.0.4",
+    "main": "lib/index.js",
+    "files": [
+        "lib"
+    ],
+    "keywords": [
+        "webpack",
+        "webapp",
+        "manifest",
+        "webapp manifest",
+        "manifest.json"
+    ],
+    "license": "MIT",
+    "description": "Create a web application manifest for your PWA based on your webpack build.",
+    "author": "David Buchan-Swanson <david.buchanswanson+npm@gmail.com>, Debanjan Basu <debanjanbasu2006@gmail.com>",
+    "devDependencies": {
+        "@babel/cli": "^7.0.0-beta.42",
+        "@babel/core": "^7.0.0-beta.42",
+        "@babel/polyfill": "^7.0.0-beta.42",
+        "@babel/preset-env": "^7.0.0-beta.42",
+        "babel-eslint": "^8.2.2",
+        "babel-plugin-syntax-trailing-function-commas": "^7.0.0-beta.0",
+        "babel-plugin-transform-class-properties": "^7.0.0-beta.3",
+        "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
+        "eslint": "^4.19.1",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-plugin-import": "^2.9.0"
+    },
+    "scripts": {
+        "build": "babel -d lib src",
+        "build:watch": "npm run build -- --watch",
+        "prepublish": "npm run build"
+    },
+    "dependencies": {
+        "mime-types": "^2.1.18"
+    }
 }

@@ -30,10 +30,10 @@ export default class WebappManifestPlugin {
     }
 
     compilationHook() {
-        const config = this.config;
+        const { config } = this;
         return function hook(compilation) {
             compilation.plugin(HTML_PLUGIN_BEFORE_PROCESS, (htmlData, callback) => {
-                let publicPath = this.query.output.publicPath;
+                let { publicPath } = this.query.output;
                 if (publicPath.length > 0 && publicPath[publicPath.length - 1] !== "/") {
                     publicPath += "/";
                 }

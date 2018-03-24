@@ -1,5 +1,5 @@
 {
-  "presets": [["env"]],
+  "presets": [["@babel/env"]],
   "plugins": [
     "transform-object-rest-spread",
     "syntax-trailing-function-commas",
