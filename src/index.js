@@ -29,7 +29,7 @@ export default class WebappManifestPlugin {
         this.config = { ...config };
     }
 
-    compilationHook() {
+    compilationHook(compiler) {
         const { config } = this;
         return function hook(compilation) {
             compilation.plugin(HTML_PLUGIN_BEFORE_PROCESS, (htmlData, callback) => {
