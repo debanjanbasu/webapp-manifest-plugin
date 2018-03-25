@@ -20,7 +20,8 @@ function normaliseConfig(config) {
         icons: config.icons || [],
         prefer_related_applications: config.prefer_related_applications || config.preferRelatedApplications || false,
         related_applications: config.related_applications || config.relatedApplications || [],
-        scope: config.scope || "/"
+        scope: config.scope || "/",
+        publicPath: config.publicPath || "/"
     };
 }
 
@@ -29,11 +30,11 @@ export default class WebappManifestPlugin {
         this.config = { ...config };
     }
 
-    compilationHook(compiler) {
+    compilationHook() {
         const { config } = this;
         return function hook(compilation) {
             compilation.plugin(HTML_PLUGIN_BEFORE_PROCESS, (htmlData, callback) => {
-                let { publicPath } = compiler.options.output;
+                let { publicPath } = config;
                 if (publicPath.length > 0 && publicPath[publicPath.length - 1] !== "/") {
                     publicPath += "/";
                 }
